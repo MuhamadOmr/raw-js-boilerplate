@@ -16,6 +16,9 @@
       "pre-commit": "lint-staged"
     }
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "babel": {
     "presets": [
       "@babel/preset-env"
