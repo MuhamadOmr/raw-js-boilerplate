@@ -5,8 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "build": "babel --copy-files src --out-dir dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "rimraf dist",
+    "build": "babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**",
+    "prepublish": "npm run lint && npm run build && npm run build"
   },
   "husky": {
     "hooks": {
